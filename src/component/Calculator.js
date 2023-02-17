@@ -1,188 +1,190 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: null,
-      operation: null,
-    };
-  }
+function Calculator() {
+  const [data, setData] = useState({
+    total: 0,
+    next: '',
+    operation: '',
+  });
 
-  handleChange = (e) => {
-    const final = calculate(this.state, e.target.innerHTML);
-    this.setState(final);
+  const handleChange = (e) => {
+    const inp = e.target.innerHTML;
+    const final = calculate(data, inp);
+    setData(final);
   };
 
-  render() {
-    const { total, next } = this.state;
-    return (
-      <div className="main">
-        <form className="screen">
-          <input
-            disabled
-            className="input"
-            maxLength={12}
-            value={next || total || 0}
-          />
-        </form>
-        <button
-          className="btn light-gray"
-          type="button"
-          onClick={this.handleChange}
-          id="AC"
-        >
-          AC
-        </button>
-        <button
-          className="btn light-gray"
-          type="button"
-          onClick={this.handleChange}
-          id="+/-"
-        >
-          +/-
-        </button>
-        <button
-          className="btn light-gray"
-          type="button"
-          onClick={this.handleChange}
-          id="%"
-        >
-          %
-        </button>
-        <button
-          className="btn org"
-          type="button"
-          onClick={this.handleChange}
-          id="÷"
-        >
-          ÷
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="7"
-        >
-          7
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="8"
-        >
-          8
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="9"
-        >
-          9
-        </button>
-        <button
-          className="btn org"
-          type="button"
-          onClick={this.handleChange}
-          id="X"
-        >
-          x
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="4"
-        >
-          4
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="5"
-        >
-          5
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="6"
-        >
-          6
-        </button>
-        <button
-          className="btn org"
-          type="button"
-          onClick={this.handleChange}
-          id="-"
-        >
-          -
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="1"
-        >
-          1
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="2"
-        >
-          2
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="3"
-        >
-          3
-        </button>
-        <button
-          className="btn org"
-          type="button"
-          onClick={this.handleChange}
-          id="+"
-        >
-          +
-        </button>
-        <button
-          className="btn zero"
-          type="button"
-          onClick={this.handleChange}
-          id="0"
-        >
-          0
-        </button>
-        <button
-          className="btn"
-          type="button"
-          onClick={this.handleChange}
-          id="dot"
-        >
-          .
-        </button>
-        <button
-          className="btn org"
-          type="button"
-          onClick={this.handleChange}
-          id="="
-        >
-          =
-        </button>
-      </div>
-    );
-  }
+  const results = `
+  ${
+  data.total || data.operation || data.next
+    ? `${data.total || ''} ${data.operation || ''} ${data.next || ''}`
+    : 0
+}`;
+
+  return (
+    <div className="main">
+      <form className="screen">
+        <input
+          disabled
+          className="input"
+          maxLength={12}
+          value={results}
+        />
+      </form>
+      <button
+        className="btn light-gray"
+        type="button"
+        onClick={handleChange}
+        id="AC"
+      >
+        AC
+      </button>
+      <button
+        className="btn light-gray"
+        type="button"
+        onClick={handleChange}
+        id="+/-"
+      >
+        +/-
+      </button>
+      <button
+        className="btn light-gray"
+        type="button"
+        onClick={handleChange}
+        id="%"
+      >
+        %
+      </button>
+      <button
+        className="btn org"
+        type="button"
+        onClick={handleChange}
+        id="÷"
+      >
+        ÷
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="7"
+      >
+        7
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="8"
+      >
+        8
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="9"
+      >
+        9
+      </button>
+      <button
+        className="btn org"
+        type="button"
+        onClick={handleChange}
+        id="X"
+      >
+        x
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="4"
+      >
+        4
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="5"
+      >
+        5
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="6"
+      >
+        6
+      </button>
+      <button
+        className="btn org"
+        type="button"
+        onClick={handleChange}
+        id="-"
+      >
+        -
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="1"
+      >
+        1
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="2"
+      >
+        2
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="3"
+      >
+        3
+      </button>
+      <button
+        className="btn org"
+        type="button"
+        onClick={handleChange}
+        id="+"
+      >
+        +
+      </button>
+      <button
+        className="btn zero"
+        type="button"
+        onClick={handleChange}
+        id="0"
+      >
+        0
+      </button>
+      <button
+        className="btn"
+        type="button"
+        onClick={handleChange}
+        id="dot"
+      >
+        .
+      </button>
+      <button
+        className="btn org"
+        type="button"
+        onClick={handleChange}
+        id="="
+      >
+        =
+      </button>
+    </div>
+  );
 }
 
 export default Calculator;
