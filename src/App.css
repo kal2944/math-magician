@@ -6,12 +6,25 @@
 }
 
 body {
-  background-color: rgb(202, 138, 21);
+  background-color: rgb(113, 102, 19);
   font-family: 'Roboto', sans-serif;
   display: grid;
   place-content: center;
-  height: 100vh;
+
+  /* height: 100vh; */
   font-size: 22px;
+}
+
+.kalc {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 15%;
+}
+
+.kalcHeader {
+  margin-top: 30px;
+  font-size: 40px;
 }
 
 .App {
@@ -74,4 +87,25 @@ body {
 
 .zero {
   grid-column: 1 / span 2;
+}
+
+/* Home Page css */
+
+.home {
+  margin: 50px;
+}
+
+.homeHeader {
+  margin-bottom: 50px;
+}
+
+.homePara {
+  padding: 20px;
+}
+
+/* Quote css */
+
+.quote {
+  margin: 200px 60px;
+  font-size: 45px;
 }
