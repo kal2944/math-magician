@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Calculator from '../component/Calculator'
+import Calculator from '../component/Calculator';
 import Home from '../pages/Home';
 import Nav from '../pages/navBar/navBar';
-import Quote from '../pages/Quote'
+import Quote from '../pages/Quote';
 import Calculate from '../logic/calculate';
 
 describe('calculator functions', () => {
