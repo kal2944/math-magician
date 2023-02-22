@@ -166,9 +166,18 @@ You can deploy this project using:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Huzaifa khan**
+
+- GitHub: [@huzaifakhan0308](https://github.com/huzaifakhan0308)
+- Twitter: [@huzaifakhan0308](https://twitter.com/home?lang=en)
+- LinkedIn: [huzaifa khan](https://www.linkedin.com/in/huzaifa-khan-938140256/)
+
 👤 **Kalkidan Daniel**
 
-- GitHub: [@kal2944](https://github.com/kal2944/math-magician)
+- GitHub: [@kal2944](https://github.com/kal2944)
+- Twitter: [@Kalkida01088197](https://twitter.com/Kalkida01088197)
+- LinkedIn: [Kalkidan Daniel](https://www.linkedin.com/in/kalkidan-daniel-b2a204238/)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
