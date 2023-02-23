@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]
+- [Live Demo](https://math-magician-hnzi.onrender.com)
 
 ## 🚀 Project Details
 
